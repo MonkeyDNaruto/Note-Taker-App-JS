@@ -1,0 +1,182 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5; /* Light background color for a clean look */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%; /* Set the width to 90% of the viewport */
+    max-width: 1000px; /* Maximum width for larger screens */
+    margin-top: 20px; /* Margin from the top of the page */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center; /* Center content inside */
+}
+
+h1 {
+    font-size: 28px; /* Larger font size for prominence */
+    color: #333333; /* Darker text color for better contrast */
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 22px; /* Larger font size for subheading */
+    color: #4CAF50; /* Greenish color for a fresh look */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between elements */
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 20px;
+    color: #333333;
+    font-weight: bolder;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px; /* Larger padding for usability */
+    border: 1px solid #ddd; /* Lighter border color */
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"]::placeholder {
+    color: #888; /* Lighter placeholder text color */
+}
+
+.btn {
+    background-color: #4CAF50; /* Primary button color */
+    color: white;
+    border: none;
+    padding: 12px 24px; /* Larger padding for appearance */
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049; /* Darker button color on hover */
+}
+
+/* Styles for individual notes */
+.notes {
+    background-color: #f9f9f9; /* Light background color for notes */
+    color: #333; /* Dark text color */
+    padding: 20px; /* Padding around the text */
+    margin: 10px; /* Margin for spacing between notes */
+    border: 1px solid #ddd; /* Lighter border color */
+    border-radius: 4px;
+    font-size: 18px; /* Font size for better readability */
+    box-sizing: border-box;
+    width: calc(50% - 20px); /* Width for two notes per line, minus margin */
+    height: 150px; /* Fixed height for consistent note size */
+    display: inline-block;
+    vertical-align: top;
+    position: relative; /* Positioning relative for absolute positioning of buttons */
+    overflow: hidden; /* Hide overflow content */
+}
+
+/* Container for buttons positioned at the bottom right corner */
+.button-container {
+    position: absolute;
+    bottom: 10px; /* Space from the bottom */
+    right: 10px; /* Space from the right */
+    display: flex; /* Display buttons in a row */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Style for the delete button */
+.delete-btn {
+    background: none;
+    border: none;
+    color: #ff4d4d; /* Red color for delete button */
+    font-size: 16px; /* Font size for better visibility */
+    cursor: pointer;
+    padding: 5px;
+}
+
+.delete-btn:hover {
+    color: #cc0000; /* Darker red on hover */
+}
+
+/* Style for the view detail button */
+.view-btn {
+    background-color: #4CAF50; /* Green color for view button */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.view-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+.detail-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+}
+
+.detail-text {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.back-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Notes container styling */
+.notes-containers {
+    display: none; /* Initially hide the container */
+    margin-top: 20px; /* Space between the container and the notes */
+    padding: 10px;
+    width: 100%;
+    max-width: 1000px; /* Same maximum width as container for alignment */
+    box-sizing: border-box;
+}
+
+/* Clear floats after notes */
+.notes-containers::after {
+    content: "";
+    display: block;
+    clear: both;
+}
