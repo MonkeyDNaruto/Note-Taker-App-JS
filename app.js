@@ -35,7 +35,7 @@ function addNotes() {
         p.appendChild(noteLabel);
 
         // Truncate the note text if it's too long
-        let displayNote = noteAdded.length >= 50 ? noteAdded.substring(0, 40) + "..." : noteAdded;
+        let displayNote = noteAdded.length >= 50 ? noteAdded.substring(0, 140) + "..." : noteAdded;
         let noteText = document.createElement('span');
         noteText.textContent = displayNote;
         p.appendChild(noteText);
